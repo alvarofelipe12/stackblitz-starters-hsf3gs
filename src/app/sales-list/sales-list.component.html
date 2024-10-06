@@ -1,1 +1,8 @@
+<div class="sales-list">
+  <ul class="list">
+    <li class="item" *ngFor="let item of sales$ | async; trackBy:item.id">
+      {{ item.product }}
+    </li>
+  </ul>
+</div>
 <p>sales-list works!</p>

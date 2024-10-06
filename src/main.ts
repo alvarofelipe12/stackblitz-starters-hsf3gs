@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideStore } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,6 @@ export class App {
   name = 'Angular';
 }
 
-bootstrapApplication(App);
+bootstrapApplication(App, {
+    providers: [provideStore()]
+});
